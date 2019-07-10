@@ -18,11 +18,19 @@ extension OpenGraphParser {
             return [:]
         }
 
-        // prepare regular expressions to extract og property and content.
+        /// nhdang103: 10/07/2019
+        /// Change the regrex to parsing Facebook App Link
         let propertyRegexp = try! NSRegularExpression(
-            pattern: "\\sproperty=(?:\"|\')og:([a-zA_Z:]+?)(?:\"|\')",
+            pattern: "\\sproperty=(?:\"|\')al:([a-zA_Z:]+?)(?:\"|\')",
             options: []
         )
+        
+        /// the original is here
+//         prepare regular expressions to extract og property and content.
+//        let propertyRegexp = try! NSRegularExpression(
+//            pattern: "\\sproperty=(?:\"|\')og:([a-zA_Z:]+?)(?:\"|\')",
+//            options: []
+//        )
         let contentRegexp = try! NSRegularExpression(
             pattern: "\\scontent=\"(.*?)\"",
             options: []

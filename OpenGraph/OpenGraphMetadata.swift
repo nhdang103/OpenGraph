@@ -2,7 +2,7 @@ import Foundation
 
 public enum OpenGraphMetadata: String, CaseIterable {
     
-    /// nhdang103: 10/06/2019
+    /// nhdang103: 10/07/2019
     /// Custom for ios Faceook App Link Fetching
     case iOSDeepLink    = "ios:url"
     
